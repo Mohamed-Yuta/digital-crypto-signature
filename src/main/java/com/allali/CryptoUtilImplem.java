@@ -41,7 +41,7 @@ public class CryptoUtilImplem {
         byte[] decryptedData = cipher.doFinal(decodedEncryptedData);
         return new String(decryptedData);
     }
-    public SecretKey keyGenerate() throws Exception{
+    public SecretKey keyGenerate() throws Exception {
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         keyGenerator.init(128);
         return keyGenerator.generateKey();
